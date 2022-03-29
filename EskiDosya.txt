@@ -1,0 +1,50 @@
+         // JSX - Javascript XML
+         var root = document.getElementById('root');
+       
+
+
+         var template =
+         <div>
+                <h1>Hello World</h1>
+                <div>Lorem, ipsum dolor.</div>
+                <ul>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Ömer</li>
+                </ul>
+         </div>;
+
+         var number = 0;
+
+         function addOne() {
+             number++;
+             renderApp();
+            console.log('add One');
+         };
+
+         function minusOne() {
+             number--;
+             renderApp();
+            console.log('minus One');
+         };
+
+         function renderApp() {
+                var template2 = (
+                            <div>
+                                <h1>Number: {number}</h1>
+                                <button id="btnPlusOne" className="btnRed" onClick={addOne}>+1</button>
+                                <button id="btnMinusOne" className="btnBlue" onClick={minusOne}>-1</button>
+
+                            </div>
+                        );
+
+                        ReactDOM.render(template2,root);
+         }
+
+         renderApp();
+
+         
+        
+
+  
